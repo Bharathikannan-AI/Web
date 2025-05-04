@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Crore Seeds | 1 Rupee. 1 Seed. 1 Crore People.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --dark-green: #27ae60;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Counter Section */
+        .counter {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .counter-box {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .counter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+        #seed-counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .progress-container {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--primary), var(--dark-green));
+            border-radius: 15px;
+            transition: width 1s ease-in-out;
+        }
+        
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--dark-green);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Donation */
+        .donation {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .donation h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+        
+        /* QR Code */
+        .qr-tile {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+            max-width: 250px;
+        }
+        .qr-code {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Hero -->
+    <header>
+        <div class="container">
+            <h1>1 Rupee. 1 Seed. 1 Crore People.</h1>
+            <p>Join the movement to plant 1 Crore trees by donating just ₹1. Together, we can grow a forest!</p>
+            <div>
+                <a href="#donate" class="btn">Donate 1 Rupee Now</a>
+                <a href="#how" class="btn">Learn More</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Counter -->
+    <section class="counter">
+        <div class="container">
+            <div class="counter-box">
+                <h2>The Power of One</h2>
+                <div id="seed-counter">0</div>
+                <p>Seeds funded out of 1 Crore</p>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <p>Every rupee takes us closer to a greener planet!</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features" id="how">
+        <div class="container">
+            <h2>Why Donate Just 1 Rupee?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>1 Rupee = 1 Tree</h3>
+                    <p>Bulk planting drives reduce costs. Your ₹1 buys a seed and its care.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Massive Impact</h3>
+                    <p>1 Crore trees can absorb 100,000+ tons of CO₂ annually.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>People-Powered</h3>
+                    <p>Proves that small contributions from many can change the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Donation -->
+    <section class="donation" id="donate">
+        <div class="container">
+            <h2>Donate in Just 10 Seconds</h2>
+            <p>Scan to pay ₹1</p>
+            <div class="qr-tile">
+                <div class="qr-code">
+                    <img src="My QR1746265083084.png" alt="Scan to Pay ₹1">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Join the #1CroreSeeds Movement</h3>
+            <p>© 2023 1 Crore Seeds. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>
